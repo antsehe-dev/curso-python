@@ -9,6 +9,7 @@ my_variable = 123
 print(type(my_variable)) #int
 
 # Tipado fuerte: no se pueden realizar operaciones entre tipos de datos incompatibles
+
 #print (10 + "20") #TypeError
 print (10 + int("20")) #30
 
