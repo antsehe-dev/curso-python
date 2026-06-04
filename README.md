@@ -14,12 +14,15 @@ Curso práctico de Python desde cero, basado en el curso de [midudev](https://gi
 | `06_request_ai_dates` | Fechas, HTTP requests y APIs de IA | 3 |
 | `07_poo` | Programación orientada a objetos | 1 |
 | `08_web_scraping` | Web scraping con BeautifulSoup | 3 |
-| **Total** | | **29 archivos** |
+| **Total basic** | | **29 archivos** |
+| `intermediate/01_data_access` | Acceso a datos (JSON, CSV, SQLite, pandas) | 4 |
+| `intermediate/02_async_await` | Programación asíncrona (asyncio, httpx) | 2 |
+| `intermediate/03_api_rest` | API REST con FastAPI | 2 |
 
 ## Requisitos
 
 - Python 3.10+
-- `pip install requests beautifulsoup4`
+- `pip install requests beautifulsoup4 fastapi uvicorn httpx pandas`
 
 ## Referencia
 
