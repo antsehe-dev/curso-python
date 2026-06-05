@@ -8,35 +8,24 @@ import requests
 # Ejercicio 1: GET request
 # Haz una petición GET a https://jsonplaceholder.typicode.com/posts/1
 # Muestra el status code y el contenido JSON.
-resp = requests.get("https://jsonplaceholder.typicode.com/posts/1")
-print("Status:", resp.status_code)
-print(resp.json())
+# Tu código aquí:
 
 # Ejercicio 2: POST request
 # Envía un POST a https://jsonplaceholder.typicode.com/posts con:
 # { "title": "Mi título", "body": "Mi contenido", "userId": 1 }
 # Muestra la respuesta JSON.
-nuevo = {"title": "Mi título", "body": "Mi contenido", "userId": 1}
-resp = requests.post("https://jsonplaceholder.typicode.com/posts", json=nuevo)
-print("Status:", resp.status_code)
-print(resp.json())
+# Tu código aquí:
 
 # Ejercicio 3: Parámetros en GET
 # Busca posts del usuario 1 en JSONPlaceholder usando params:
 # https://jsonplaceholder.typicode.com/posts?userId=1
 # Muestra cuántos posts tiene.
-resp = requests.get("https://jsonplaceholder.typicode.com/posts", params={"userId": 1})
-posts = resp.json()
-print(f"El usuario 1 tiene {len(posts)} posts")
+# Tu código aquí:
 
 # Ejercicio 4: Manejo de errores
 # Intenta hacer GET a una URL que no existe (status 404).
 # Verifica el status code y muestra un mensaje adecuado.
-resp = requests.get("https://jsonplaceholder.typicode.com/posts/99999")
-if resp.status_code == 404:
-    print("El recurso no existe (404)")
-else:
-    print(f"Status: {resp.status_code}")
+# Tu código aquí:
 
 # Ejercicio 5: Headers personalizados
 # Haz una petición GET con un User-Agent personalizado

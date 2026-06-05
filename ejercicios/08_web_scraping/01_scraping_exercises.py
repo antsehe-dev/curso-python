@@ -9,10 +9,7 @@ from bs4 import BeautifulSoup
 # Ejercicio 1: Extraer título
 # Descarga el HTML de https://example.com con requests.
 # Usa BeautifulSoup para extraer el título (<title>) y el contenido del <h1>.
-resp = requests.get("https://example.com")
-soup = BeautifulSoup(resp.text, 'html.parser')
-print("Title:", soup.title.text)
-print("H1:", soup.h1.text if soup.h1 else "No h1")
+# Tu código aquí:
 
 # Ejercicio 2: Encontrar por clase
 # Dado el siguiente HTML simulado (variable html_str):
@@ -28,26 +25,18 @@ html_str = """
 </html>
 """
 soup = BeautifulSoup(html_str, 'html.parser')
-productos = soup.find_all(class_="producto")
-for p in productos:
-    print(p.text)
+# Tu código aquí:
 
 # Ejercicio 3: Extraer enlaces
 # Descarga https://example.com y extrae TODOS los enlaces (<a>).
 # Muestra el texto del enlace y el atributo href.
-resp = requests.get("https://example.com")
-soup = BeautifulSoup(resp.text, 'html.parser')
-for a in soup.find_all('a'):
-    print(f"{a.text.strip()} -> {a.get('href')}")
+# Pista: usa soup.find_all('a')
+# Tu código aquí:
 
 # Ejercicio 4: Scraping con headers
 # Crea una función get_page_with_headers(url) que haga una petición GET
 # con un User-Agent de navegador real. Retorna el texto de la respuesta.
-def get_page_with_headers(url):
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-    resp = requests.get(url, headers=headers)
-    return resp.text
-print(get_page_with_headers("https://httpbin.org/headers")[:200])
+# Tu código aquí:
 
 # Ejercicio 5: Extraer tabla
 # Dado el HTML simulado, extrae todas las filas de la tabla.

@@ -9,26 +9,7 @@ Nivel: Intermedio
 # Crea una clase Libro con atributos: titulo, autor, anio, prestado=False.
 # Métodos: prestar() (cambia prestado a True si está disponible),
 # devolver() (cambia prestado a False), y __str__() que muestre la info del libro.
-class Libro:
-    def __init__(self, titulo, autor, anio):
-        self.titulo = titulo
-        self.autor = autor
-        self.anio = anio
-        self.prestado = False
-    def prestar(self):
-        if not self.prestado:
-            self.prestado = True
-            return True
-        return False
-    def devolver(self):
-        self.prestado = False
-    def __str__(self):
-        estado = "prestado" if self.prestado else "disponible"
-        return f"{self.titulo} ({self.anio}) - {self.autor} [{estado}]"
-lib = Libro("1984", "Orwell", 1949)
-print(lib)
-lib.prestar()
-print(lib)
+# Tu código aquí:
 
 # Ejercicio 2: Clase Banco
 # Crea una clase CuentaBancaria con:
@@ -37,29 +18,7 @@ print(lib)
 # - Método retirar(cantidad) que disminuya el saldo si hay suficiente
 # - Método obtener_saldo() getter
 # - Método transferir(destino, cantidad) que transfiera entre cuentas
-class CuentaBancaria:
-    def __init__(self, titular, saldo=0):
-        self.titular = titular
-        self.__saldo = saldo
-    def depositar(self, cantidad):
-        self.__saldo += cantidad
-    def retirar(self, cantidad):
-        if cantidad <= self.__saldo:
-            self.__saldo -= cantidad
-            return True
-        return False
-    def obtener_saldo(self):
-        return self.__saldo
-    def transferir(self, destino, cantidad):
-        if self.retirar(cantidad):
-            destino.depositar(cantidad)
-            return True
-        return False
-c1 = CuentaBancaria("Ana", 1000)
-c2 = CuentaBancaria("Luis", 500)
-c1.transferir(c2, 200)
-print(f"{c1.titular}: {c1.obtener_saldo()}€")
-print(f"{c2.titular}: {c2.obtener_saldo()}€")
+# Tu código aquí:
 
 # --- PARTE 2: Herencia ---
 
