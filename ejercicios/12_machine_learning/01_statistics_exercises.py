@@ -15,17 +15,28 @@ from scipy import stats
 velocidades = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78]
 # Calcula la media manualmente (suma / total) y con np.mean().
 # Compara los resultados.
-# Tu código aquí:
+media_manual = sum(velocidades) / len(velocidades)
+media_np = np.mean(velocidades)
+print(f"Media manual: {media_manual}, Media numpy: {media_np}")
 
 # Ejercicio 2: Mediana
 # Con la misma lista velocidades, calcula la mediana manualmente
 # (ordena los valores y toma el del medio) y con np.median().
-# Tu código aquí:
+ordenado = sorted(velocidades)
+n = len(ordenado)
+if n % 2 == 0:
+    mediana_manual = (ordenado[n//2 - 1] + ordenado[n//2]) / 2
+else:
+    mediana_manual = ordenado[n//2]
+print(f"Mediana manual: {mediana_manual}, Mediana numpy: {np.median(velocidades)}")
 
 # Ejercicio 3: Moda
 # Dada la lista: datos = [1, 2, 3, 2, 4, 2, 5, 2, 3, 1, 2]
 # Encuentra la moda (valor más frecuente) manualmente y con scipy.stats.mode().
-# Tu código aquí:
+datos = [1, 2, 3, 2, 4, 2, 5, 2, 3, 1, 2]
+moda_manual = max(set(datos), key=datos.count)
+moda_scipy = stats.mode(datos, keepdims=True)
+print(f"Moda manual: {moda_manual}, Moda scipy: {moda_scipy.mode[0]}")
 
 # Ejercicio 4: Desviación estándar
 # Con velocidades, calcula la desviación estándar manualmente:
@@ -35,12 +46,15 @@ velocidades = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78]
 # 4. Calcula la media de esas diferencias (varianza)
 # 5. Raíz cuadrada de la varianza
 # Luego verifica con np.std().
-# Tu código aquí:
+media = sum(velocidades) / len(velocidades)
+varianza = sum((x - media)**2 for x in velocidades) / len(velocidades)
+std_manual = varianza ** 0.5
+print(f"Desviación manual: {std_manual}, Numpy: {np.std(velocidades)}")
 
 # Ejercicio 5: Varianza
 # Calcula la varianza manualmente y con np.var().
 # Recuerda: la varianza es la desviación estándar al cuadrado.
-# Tu código aquí:
+print(f"Varianza manual: {varianza}, Numpy: {np.var(velocidades)}")
 
 # Ejercicio 6: Percentiles
 # Dada la lista de edades:
@@ -50,12 +64,17 @@ edades = [5, 31, 43, 48, 50, 41, 7, 11, 15, 39, 80, 82, 32, 2, 8, 6, 25, 36, 27,
 # - Percentil 50 (mediana)
 # - Percentil 75
 # - Percentil 90
-# Tu código aquí:
+print(f"P25: {np.percentile(edades, 25)} (el 25% de los datos está por debajo)")
+print(f"P50: {np.percentile(edades, 50)} (mediana)")
+print(f"P75: {np.percentile(edades, 75)}")
+print(f"P90: {np.percentile(edades, 90)}")
 
 # Ejercicio 7: Rango intercuartílico (IQR)
 # Usa los percentiles para calcular el IQR = Q3 - Q1
 # ¿Qué indica el IQR sobre los datos?
-# Tu código aquí:
+Q1, Q3 = np.percentile(edades, [25, 75])
+IQR = Q3 - Q1
+print(f"IQR: {IQR} (rango donde está el 50% central de los datos)")
 
 # ============================================================
 # PARTE 2: Análisis de datos con numpy

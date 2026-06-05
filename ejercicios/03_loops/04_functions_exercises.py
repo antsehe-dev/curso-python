@@ -5,16 +5,23 @@ Nivel: Básico-Intermedio
 
 # Ejercicio 1: Función simple
 # Define una función saludar(nombre) que imprima "¡Hola, [nombre]!".
-# Tu código aquí:
+def saludar(nombre):
+    print(f"¡Hola, {nombre}!")
+saludar("Ana")
 
 # Ejercicio 2: Return
 # Define una función suma(a, b) que devuelva la suma de dos números.
-# Tu código aquí:
+def suma(a, b):
+    return a + b
+print(suma(3, 5))
 
 # Ejercicio 3: Parámetros por defecto
 # Define una función potencia(base, exponente=2) que calcule la potencia.
 # Pruébala con y sin el segundo argumento.
-# Tu código aquí:
+def potencia(base, exponente=2):
+    return base ** exponente
+print(potencia(3))
+print(potencia(3, 4))
 
 # Ejercicio 4: *args
 # Define una función sumar_todos(*args) que sume todos los números que reciba.

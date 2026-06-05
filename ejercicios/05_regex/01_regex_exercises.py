@@ -9,22 +9,29 @@ import re
 # Dado el texto "Mi correo es usuario@example.com y otro es test@test.org"
 # Usa re.search() para encontrar el primer correo electrónico.
 # Patrón: r'\S+@\S+\.\S+'
-# Tu código aquí:
+texto = "Mi correo es usuario@example.com y otro es test@test.org"
+match = re.search(r'\S+@\S+\.\S+', texto)
+print(match.group())
 
 # Ejercicio 2: Extraer todos
 # Del mismo texto anterior, usa re.findall() para extraer TODOS los correos.
-# Tu código aquí:
+correos = re.findall(r'\S+@\S+\.\S+', texto)
+print(correos)
 
 # Ejercicio 3: Grupos
 # Dado el texto "Fecha: 15/03/2024", usa re.search() con grupos
 # para extraer día, mes y año por separado. Patrón: r'(\d{2})/(\d{2})/(\d{4})'
-# Tu código aquí:
+fecha = "Fecha: 15/03/2024"
+m = re.search(r'(\d{2})/(\d{2})/(\d{4})', fecha)
+print(f"Día: {m.group(1)}, Mes: {m.group(2)}, Año: {m.group(3)}")
 
 # Ejercicio 4: Reemplazar
 # Dado "Hola, mi número es 123-456-789. Llámame."
 # Usa re.sub() para reemplazar el patrón de teléfono por "[OCULTO]".
 # Patrón: r'\d{3}-\d{3}-\d{3}'
-# Tu código aquí:
+t = "Hola, mi número es 123-456-789. Llámame."
+resultado = re.sub(r'\d{3}-\d{3}-\d{3}', '[OCULTO]', t)
+print(resultado)
 
 # Ejercicio 5: Validar formato
 # Pide al usuario un número de teléfono en formato "+34 612345678" y valida

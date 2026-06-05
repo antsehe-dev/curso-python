@@ -6,21 +6,34 @@ Nivel: Básico-Intermedio
 # Ejercicio 1: Crear y acceder
 # Crea un diccionario persona con clave: nombre, edad, ciudad.
 # Accede e imprime cada valor.
-# Tu código aquí:
+persona = {"nombre": "Luis", "edad": 30, "ciudad": "Madrid"}
+print(persona["nombre"], persona["edad"], persona["ciudad"])
 
 # Ejercicio 2: Añadir y modificar
 # Dado usuario = {"nombre": "Ana"}
 # Añade las claves "email" y "edad". Luego modifica "edad".
-# Tu código aquí:
+usuario = {"nombre": "Ana"}
+usuario["email"] = "ana@email.com"
+usuario["edad"] = 25
+usuario["edad"] = 26
+print(usuario)
 
 # Ejercicio 3: Métodos del diccionario
 # Dado inventario = {"manzanas": 5, "peras": 3, "uvas": 12}
 # Usa .keys(), .values(), .items() para mostrar cada componente.
-# Tu código aquí:
+inv = {"manzanas": 5, "peras": 3, "uvas": 12}
+print("Keys:", list(inv.keys()))
+print("Values:", list(inv.values()))
+print("Items:", list(inv.items()))
 
 # Ejercicio 4: Verificar existencia
 # Pide una clave al usuario y verifica si existe en el diccionario usando "in".
-# Tu código aquí:
+d = {"a": 1, "b": 2, "c": 3}
+clave = input("Clave a buscar: ")
+if clave in d:
+    print(f"Existe, valor: {d[clave]}")
+else:
+    print("No existe")
 
 # Ejercicio 5: Diccionario anidado
 # Crea un diccionario estudiantes donde cada clave es un nombre y cada valor
