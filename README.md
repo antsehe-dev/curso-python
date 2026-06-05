@@ -18,11 +18,26 @@ Curso práctico de Python desde cero, basado en el curso de [midudev](https://gi
 | `intermediate/01_data_access` | Acceso a datos (JSON, CSV, SQLite, pandas) | 4 |
 | `intermediate/02_async_await` | Programación asíncrona (asyncio, httpx) | 2 |
 | `intermediate/03_api_rest` | API REST con FastAPI | 2 |
+| `intermediate/04_machine_learning` | Machine Learning (pandas, scipy, numpy) | 2 |
 
 ## Requisitos
 
 - Python 3.10+
-- `pip install requests beautifulsoup4 fastapi uvicorn httpx pandas`
+
+### Con entorno virtual (recomendado)
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate   # Windows
+# source .venv/bin/activate   # Linux/Mac
+pip install -r requirements.txt
+```
+
+### Sin entorno virtual
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Referencia
 
