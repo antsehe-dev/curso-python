@@ -45,8 +45,8 @@ El repositorio incluye dos carpetas con ejercicios prácticos en la rama `ejerci
 
 | Carpeta | Descripción |
 |---------|-------------|
-| `ejercicios/` | Enunciados para practicar (con `# Tu código aquí:`) |
-| `soluciones/` | Mismos ejercicios resueltos (para consultar) |
+| `exercises/` | Enunciados para practicar (con `# Tu código aquí:`) |
+| `solutions/` | Mismos ejercicios resueltos (para consultar) |
 
 Los ejercicios cubren desde fundamentos básicos hasta machine learning, asincronía y APIs REST.
 
