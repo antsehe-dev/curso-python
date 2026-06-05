@@ -1,6 +1,6 @@
 # Curso de Python
 
-Curso práctico de Python desde cero, basado en el curso de [midudev](https://github.com/midudev/curso-python).
+Curso práctico de Python desde cero. La parte **basic** sigue el temario de [midudev/curso-python](https://github.com/midudev/curso-python). La parte **intermediate** combina referencias de [W3Schools](https://www.w3schools.com/python/) y apoyo de IA.
 
 ## Estructura
 
@@ -39,7 +39,4 @@ pip install -r requirements.txt
 pip install -r requirements.txt
 ```
 
-## Referencia
-
-Este curso sigue el temario de [midudev/curso-python](https://github.com/midudev/curso-python).
 
