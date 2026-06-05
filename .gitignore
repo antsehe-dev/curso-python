@@ -1,3 +1,6 @@
 # Frida specifications folder
 .frida-specs/**
 .vscode/**
+
+# Virtual environment
+.venv/**
