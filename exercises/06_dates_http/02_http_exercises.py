@@ -1,0 +1,44 @@
+"""
+EJERCICIOS: HTTP Requests (requests)
+Nivel: Intermedio
+"""
+
+import requests
+
+# Ejercicio 1: GET request
+# Haz una petición GET a https://jsonplaceholder.typicode.com/posts/1
+# Muestra el status code y el contenido JSON.
+# Tu código aquí:
+
+# Ejercicio 2: POST request
+# Envía un POST a https://jsonplaceholder.typicode.com/posts con:
+# { "title": "Mi título", "body": "Mi contenido", "userId": 1 }
+# Muestra la respuesta JSON.
+# Tu código aquí:
+
+# Ejercicio 3: Parámetros en GET
+# Busca posts del usuario 1 en JSONPlaceholder usando params:
+# https://jsonplaceholder.typicode.com/posts?userId=1
+# Muestra cuántos posts tiene.
+# Tu código aquí:
+
+# Ejercicio 4: Manejo de errores
+# Intenta hacer GET a una URL que no existe (status 404).
+# Verifica el status code y muestra un mensaje adecuado.
+# Tu código aquí:
+
+# Ejercicio 5: Headers personalizados
+# Haz una petición GET con un User-Agent personalizado
+# (ej: "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
+# a https://httpbin.org/headers y muestra la respuesta.
+# Tu código aquí:
+
+# Ejercicio 6: API de clima simulada
+# Usa https://jsonplaceholder.typicode.com como si fuera una API real.
+# Obtén los primeros 5 posts y muestra sus títulos.
+# Tu código aquí:
+
+# Ejercicio 7: Autenticación (simulada)
+# Usa https://httpbin.org/basic-auth/user/pass con auth=(user, pass)
+# para probar autenticación básica.
+# Tu código aquí:
