@@ -6,25 +6,44 @@ Nivel: Básico
 # Ejercicio 1: append y extend
 # Crea una lista vacía. Añade los números del 1 al 5 con append().
 # Luego usa extend() para añadir [6, 7, 8, 9, 10].
-# Tu código aquí:
+nums = []
+for i in range(1, 6):
+    nums.append(i)
+print("After append:", nums)
+nums.extend([6, 7, 8, 9, 10])
+print("After extend:", nums)
 
 # Ejercicio 2: insert y remove
 # Dada la lista letras = ["a", "c", "d", "e", "b", "c"]
 # Inserta "z" en la posición 0. Luego elimina la primera ocurrencia de "c".
-# Tu código aquí:
+letras = ["a", "c", "d", "e", "b", "c"]
+letras.insert(0, "z")
+print("After insert:", letras)
+letras.remove("c")
+print("After remove:", letras)
 
 # Ejercicio 3: pop y del
 # Dada la lista nums = [10, 20, 30, 40, 50]
 # Usa pop() para eliminar y obtener el último elemento.
 # Usa del para eliminar el elemento en el índice 1.
 # Usa pop(0) para eliminar y obtener el primer elemento.
-# Tu código aquí:
+nums = [10, 20, 30, 40, 50]
+print("pop:", nums.pop())
+print("After pop:", nums)
+del nums[1]
+print("After del:", nums)
+print("pop(0):", nums.pop(0))
+print("After pop(0):", nums)
 
 # Ejercicio 4: sort y sorted
 # Dada la lista palabras = ["manzana", "pera", "MELÓN", "plátano", "KIWI"]
 # Ordena alfabéticamente (sin distinguir mayúsculas) usando sort con key=str.lower.
 # Luego usa sorted() para crear una nueva lista ordenada de forma descendente.
-# Tu código aquí:
+palabras = ["manzana", "pera", "MELÓN", "plátano", "KIWI"]
+palabras.sort(key=str.lower)
+print("Sorted in-place:", palabras)
+desc = sorted(palabras, key=str.lower, reverse=True)
+print("Descending:", desc)
 
 # Ejercicio 5: count e in
 # Dada la lista datos = [1, 2, 3, 2, 4, 2, 5, 2]
