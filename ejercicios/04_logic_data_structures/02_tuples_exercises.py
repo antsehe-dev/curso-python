@@ -29,18 +29,44 @@ print(f"Lat: {latitud}, Lon: {longitud}, Alt: {altitud}")
 # Crea un diccionario donde las claves sean tuplas (x, y) y los valores sean nombres de ciudades.
 # Ej: {(40.41, -3.70): "Madrid", (48.85, 2.35): "París"}
 # Tu código aquí:
+dict = {
+    (30,20): "Madrid",
+    (48.85, 2.35): "París"
+}
 
 # Ejercicio 5: count() e index()
 # Dada tupla numeros = (1, 2, 3, 2, 4, 2, 5)
 # Cuenta cuántas veces aparece el 2. Encuentra el índice de la primera ocurrencia del 4.
 # Tu código aquí:
+numeros = (1, 2, 3, 2, 4, 2, 5)
+
+print(numeros.count(2))
+print(numeros.index(4))
+
 
 # Ejercicio 6: Lista de tuplas
 # Crea una lista de tuplas con nombres y edades: [("Ana", 25), ("Luis", 30), ("Sofía", 22)]
 # Itera e imprime "Nombre tiene X años".
 # Tu código aquí:
+nombres_edades = [("Ana", 25), ("Luis", 30), ("Sofía", 22)]
+for nombre, edad in nombres_edades:
+    print(f"{nombre} tiene {edad} años")
+
 
 # Ejercicio 7: Comparar listas vs tuplas
 # Crea una lista y una tupla con los mismos elementos. Muestra sus tipos y
 # demuestra que la lista es mutable y la tupla inmutable.
 # Tu código aquí:
+lista = [1, 2, 3]
+tupla = (1, 2, 3)
+print(f"Lista: {lista}, Tipo: {type(lista)}")
+print(f"Tupla: {tupla}, Tipo: {type(tupla)}")
+try:
+    lista[0] = 99
+    print(f"Lista modificada: {lista}")
+except TypeError as e:
+    print(f"Error al modificar lista: {e}")
+try:
+    tupla[0] = 99
+except TypeError as e:
+    print(f"Error al modificar tupla: {e}")
